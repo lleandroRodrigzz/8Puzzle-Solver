@@ -1,0 +1,229 @@
+/* 8-Puzzle Solver - Dark Theme Styles */
+
+/* Background and Base */
+.root {
+    -fx-background-color: #1a1f2e;
+    -fx-font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* Text Fields */
+.text-field {
+    -fx-background-color: #2d3748;
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #718096;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-padding: 12;
+    -fx-font-size: 14px;
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+}
+
+.text-field:focused {
+    -fx-border-color: #3b82f6;
+    -fx-background-color: #374151;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-background-color: #2d3748;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #2d3748;
+    -fx-text-fill: #ffffff;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #2d3748;
+    -fx-border-color: #4a5568;
+    -fx-border-width: 1;
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: #2d3748;
+    -fx-text-fill: #ffffff;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #374151;
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #3b82f6;
+}
+
+/* Buttons */
+.button {
+    -fx-cursor: hand;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-opacity: 0.9;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 12, 0, 0, 4);
+}
+
+.button:pressed {
+    -fx-translate-y: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 4, 0, 0, 1);
+}
+
+/* Primary Button (Solve) */
+#solveButton {
+    -fx-background-color: #3b82f6;
+    -fx-text-fill: #ffffff;
+}
+
+#solveButton:hover {
+    -fx-background-color: #2563eb;
+}
+
+/* Secondary Button (Shuffle) */
+#shuffleButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #4a5568;
+    -fx-border-width: 2;
+}
+
+#shuffleButton:hover {
+    -fx-border-color: #60a5fa;
+    -fx-background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Navigation Buttons */
+#prevButton, #nextButton {
+    -fx-background-color: #2d3748;
+    -fx-text-fill: #ffffff;
+}
+
+#prevButton:hover, #nextButton:hover {
+    -fx-background-color: #374151;
+}
+
+/* Puzzle Tiles */
+.puzzle-tile {
+    -fx-background-color: #3b82f6;
+    -fx-background-radius: 12;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(59, 130, 246, 0.4), 10, 0, 0, 2);
+}
+
+.puzzle-tile:hover {
+    -fx-background-color: #2563eb;
+    -fx-cursor: hand;
+}
+
+.empty-tile {
+    -fx-background-color: transparent;
+    -fx-effect: none;
+}
+
+/* Text Area */
+.text-area {
+    -fx-background-color: #2d3748;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+}
+
+.text-area .content {
+    -fx-background-color: #2d3748;
+}
+
+.text-area:focused {
+    -fx-border-color: #3b82f6;
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: #2d3748;
+}
+
+.text-area .scroll-pane .viewport {
+    -fx-background-color: #2d3748;
+}
+
+.text-area .scroll-pane .scroll-bar:vertical {
+    -fx-background-color: #2d3748;
+}
+
+.text-area .scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: #4a5568;
+    -fx-background-radius: 4;
+}
+
+.text-area .scroll-pane .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #60a5fa;
+}
+
+/* Labels */
+.label {
+    -fx-text-fill: #e2e8f0;
+}
+
+/* Status Label Colors */
+.status-success {
+    -fx-text-fill: #48bb78;
+}
+
+.status-error {
+    -fx-text-fill: #f56565;
+}
+
+.status-info {
+    -fx-text-fill: #60a5fa;
+}
+
+/* Scrollbar styling */
+.scroll-bar {
+    -fx-background-color: #2d3748;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #4a5568;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #60a5fa;
+}
+
+/*---------------- Estilo para as peças numeradas do quebra-cabeça ------------------*/
+.puzzle-tile {
+    -fx-background-color: #3b82f6; /* Azul vibrante */
+    -fx-background-radius: 12;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 38px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 3);
+    -fx-cursor: hand;
+
+    /* Transição suave para o efeito hover */
+    -fx-transition: -fx-background-color 0.2s ease-in-out;
+}
+
+/* Efeito ao passar o mouse sobre a peça */
+.puzzle-tile:hover {
+    -fx-background-color: #2563eb; /* Azul um pouco mais escuro */
+}
+
+/* Estilo para a peça vazia (o '0') */
+.empty-tile {
+    -fx-background-color: #2d3748; /* Cor de fundo mais escura */
+    -fx-background-radius: 12;
+    -fx-effect: none;
+    -fx-cursor: default;
+}
+/*-----------------------------------------------------------------------------------*/

@@ -2,7 +2,7 @@ package grupo.unoeste.alo8puzzle;
 
 import java.util.ArrayList;
 
-public class EightPuzzle {
+public class EightPuzzleController {
     private int [][] matriz = new int[3][3];
     private int [][] random = new int[3][3];
     private String finalState;
@@ -14,8 +14,8 @@ public class EightPuzzle {
                 arrayList = procuraNumero(matriz, random[i][j]);
                 calculaDistManhattan(arrayList.get(0), arrayList.get(1), i, j);
 
-                // aqui vai entrar o algoritimo de buscar (A DECIDIR)
-                // BFS/DFS/... e o A*
+                // vai entrar o algoritimo de buscar (A DECIDIR)
+                // BestFirst e o A*
             }
         }
     }
@@ -125,14 +125,14 @@ public class EightPuzzle {
         }
     }
 
-    public EightPuzzle() {
+    public EightPuzzleController() {
     }
 
-    public EightPuzzle(String finalState) {
+    public EightPuzzleController(String finalState) {
         this.finalState = finalState;
     }
 
-    public EightPuzzle(int[][] matriz, String finalState) {
+    public EightPuzzleController(int[][] matriz, String finalState) {
         this.matriz = matriz;
         this.finalState = finalState;
     }
@@ -151,5 +151,13 @@ public class EightPuzzle {
 
     public void setFinalState(String finalState) {
         this.finalState = finalState;
+    }
+
+    public int[][] getRandom() {
+        return random;
+    }
+
+    public void setRandom(int[][] random) {
+        this.random = random;
     }
 }
