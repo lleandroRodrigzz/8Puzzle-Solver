@@ -13,6 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.Region?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="700.0" minWidth="1200.0"
@@ -46,10 +47,10 @@
                 <Insets top="40.0" bottom="40.0" left="40.0" right="40.0" />
             </padding>
             <children>
-                <!-- Left Panel - Controls -->
+                <!-- Painel da Esquerda - Controles e Entradas -->
                 <VBox spacing="20.0" prefWidth="320.0">
                     <children>
-                        <Label text="Digite o estado inicial, de cima para baixo, da direita para a esquerda, 10 caracteres, ex: &quot;0123456678&quot;"
+                        <Label text="Digite o estado inicial, ex: &quot;0123456678&quot;"
                                wrapText="true"
                                style="-fx-text-fill: #a0aec0; -fx-font-size: 13px;">
                             <padding>
@@ -57,6 +58,7 @@
                             </padding>
                         </Label>
                         <TextField fx:id="initialStateField"
+                                   text="123405678"
                                    promptText="218635740"
                                    style="-fx-background-color: #2d3748; -fx-text-fill: #ffffff;
                                           -fx-prompt-text-fill: #718096; -fx-background-radius: 8;
@@ -64,14 +66,14 @@
                                           -fx-border-color: transparent; -fx-border-width: 2;">
                         </TextField>
 
-                        <Label text="Insira o estado final"
+                        <Label text="Insira o estado final, ex: &quot;123456078&quot;"
                                style="-fx-text-fill: #a0aec0; -fx-font-size: 13px;">
                             <padding>
                                 <Insets top="10.0" bottom="5.0" />
                             </padding>
                         </Label>
                         <TextField fx:id="goalStateField"
-                                   text="123456780"
+                                   text="123456078"
                                    style="-fx-background-color: #2d3748; -fx-text-fill: #ffffff;
                                           -fx-prompt-text-fill: #718096; -fx-background-radius: 8;
                                           -fx-border-radius: 8; -fx-padding: 12; -fx-font-size: 14px;
@@ -91,6 +93,10 @@
                                          -fx-padding: 8; -fx-font-size: 14px;" />
 
                         <Region prefHeight="20.0" />
+
+                        <CheckBox fx:id="resolverDiretoCheckBox" text="Mostrar resultado final diretamente"
+                                  style="-fx-text-fill: #a0aec0; -fx-padding: 10 0 0 0;"
+                                  selected="true"/>
 
                         <Button fx:id="shuffleButton"
                                 text="Embaralhar o Puzzle"
@@ -113,7 +119,7 @@
                     </children>
                 </VBox>
 
-                <!-- Center Panel - Puzzle Grid -->
+                <!-- Painel Central - QuebraCabeca -->
                 <VBox alignment="CENTER" spacing="25.0">
                     <children>
                         <GridPane fx:id="puzzleGrid"
@@ -154,7 +160,7 @@
                     </children>
                 </VBox>
 
-                <!-- Right Panel - Results -->
+                <!-- Painel Direita - Resultados -->
                 <VBox spacing="15.0" prefWidth="320.0">
                     <children>
                         <Label text="Resutados"

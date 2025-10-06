@@ -221,9 +221,9 @@
 
 /* Estilo para a peça vazia (o '0') */
 .empty-tile {
-    -fx-background-color: #2d3748; /* Cor de fundo mais escura */
-    -fx-background-radius: 12;
+    -fx-background-color: transparent; /* Deixa o fundo invisível */
+    -fx-background-radius: 12;         /* Mantém o raio para consistência de layout */
+    -fx-border-color: transparent;     /* Garante que não haja bordas */
     -fx-effect: none;
-    -fx-cursor: default;
 }
 /*-----------------------------------------------------------------------------------*/
