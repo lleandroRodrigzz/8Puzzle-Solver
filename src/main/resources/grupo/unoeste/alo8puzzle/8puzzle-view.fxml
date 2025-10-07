@@ -213,7 +213,7 @@
                             <children>
                                 <Label text="Custo do caminho :"
                                        style="-fx-text-fill: #e2e8f0; -fx-font-size: 14px; -fx-font-weight: bold;" />
-                                <Label text="N/A"
+                                <Label fx:id="custoDoCaminho" text="N/A"
                                        style="-fx-text-fill: #cbd5e0; -fx-font-size: 14px;" />
                             </children>
                         </HBox>

@@ -13,9 +13,6 @@ public class EightPuzzleApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(EightPuzzleApplication.class.getResource("8puzzle-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1300, 800);
 
-        //aqui eu adiciono as classes do css,
-        //para que o java entenda em que momento podemos aplicar as classes css;
-
         scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
 
         stage.setTitle("Trabalho Bimestral - Inteligencia Artificial I");
